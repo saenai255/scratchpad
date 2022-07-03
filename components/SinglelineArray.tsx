@@ -12,7 +12,7 @@ export interface SinglelineArrayProps {
 const SinglelineArray: FC<SinglelineArrayProps> = ({ data, depth, NewLine }) => {
     return (
         <Fragment>
-            <LB/>{data.map((value, i) => <Fragment><JsValue value={value} depth={depth+1} NewLine={NewLine} /><Comma/></Fragment>)}<RB/>
+            <LB/>{data.map((value, i) => <Fragment><JsValue value={value} depth={depth+1} NewLine={NewLine} />{i < data.length - 1 ? <Comma/> : ''}{i < data.length - 1 ? ' ' : ''}</Fragment>)}<RB/>
         </Fragment>
     )
 }

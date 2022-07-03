@@ -7,7 +7,7 @@ export interface PageTabProps {
 }
 
 const PageTab: FC<PageTabProps> = ({ children, active, href }) => {
-    return <a href={href} class={'page-tab' + (active ? ' active': '')}>{children}</a>
+    return <a href={href} class={'unselectable page-tab' + (active ? ' active': '')}>{children}</a>
 }
 
 export default PageTab

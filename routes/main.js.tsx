@@ -65,7 +65,7 @@ export default function Home() {
       <head>
         <title>main.js | Paul Cosma</title>
       </head>
-      
+
       <link rel="stylesheet" href="/css/styles.css" />
 
       <div>

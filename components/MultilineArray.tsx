@@ -14,8 +14,8 @@ const MultilineArray: FC<MultilineArrayProps> = ({ data, depth, NewLine }) => {
     return (
         <Fragment>
             <LB/>
-            {data.map(value => <Fragment>
-                <NewLine/><Tab depth={depth + 1}/><JsValue value={value} depth={depth+1} NewLine={NewLine} /><Comma/>
+            {data.map((value, i) => <Fragment>
+                <NewLine/><Tab depth={depth + 1}/><JsValue value={value} depth={depth+1} NewLine={NewLine} />{i < data.length - 1 ? <Comma/> : ''}
             </Fragment>)}
             <NewLine/><Tab depth={depth} /><RB/>
         </Fragment>

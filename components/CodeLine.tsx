@@ -10,7 +10,7 @@ const makeNewLine = (): FC => {
         return (
             <Fragment>
                 <br />
-                <span class="line-number">{padLeft(lineNo) + lineNo}</span>{'\u00A0\u00A0'}
+                <span class="line-number unselectable">{padLeft(lineNo) + lineNo}</span>
             </Fragment>
         )
     }

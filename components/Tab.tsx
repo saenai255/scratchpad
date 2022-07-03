@@ -6,7 +6,7 @@ export interface TabProps {
 }
 
 const Tab: FC<TabProps> = ({ depth }) => {
-    return <Fragment>{new Array(depth || 1).fill('.').map(str => <span class="tab-dot">{str}</span>)}</Fragment>
+    return <Fragment>{new Array(depth || 1).fill('.').map(str => <span class="tab-dot unselectable">{str}</span>)}</Fragment>
 }
 
 export default Tab
