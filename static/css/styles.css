@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Spleen;
+    src: url("/fonts/spleen-32x64.otf") format("opentype");
+}
+
+:root {
+    --font-color-white: #F7F1FF;
+    --font-color-primary: #EE556B;
+    --font-color-secondary: #46B2D3;
+    --font-color-tertiary: #78C162;
+    --font-color-value: #948AE3;
+    --font-color-raw: #FCE566;
+    --font-color-comment: #646254;
+    --background-default: #222222;
+    --font-color-symbol: #7D888B;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.keyword {
+    color: var(--font-color-primary);
+}
+
+.symbol {
+    color: var(--font-color-symbol)
+}
+
+.attribute {
+    color: var(--font-color-secondary);
+}
+
+.func {
+    color: var(--font-color-tertiary)
+}
+
+.value {
+    color: var(--font-color-value)
+}
+
+.string {
+    color: var(--font-color-raw);
+}
+
+*, html {
+    font-family: Spleen;
+    font-size: 1.15rem;
+    color: var(--font-color-white);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-default);
+}
+
+.comment {
+    color: var(--font-color-comment)
+}
+
+.tab-dot {
+    font-weight: 800;
+    position: relative;
+    bottom: 0.25rem;
+    padding-right: 2ch;
+    color: var(--font-color-comment);
+}
+
+.line-number {
+    color: #c7b0a0;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0.12rem;
+    text-align: right;
+    padding-right: 1ch;
+    padding-left: 3ch;
+}
+
+.page-tab {
+    color: var(--font-color-symbol);
+    max-height: 20px;
+    min-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.page-tab:hover {
+    border-bottom: 2px solid var(--font-color-symbol);
+    cursor: pointer;
+}
+
+.page-tab.active {
+    border-bottom: 2px solid var(--font-color-raw);
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--font-color-raw);
+}
